@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DishesViewController.swift
 //  MyWeight
 //
 //  Created by Astemir Shibzuhov on 5/17/21.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class DishesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     }
 }
 
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension DishesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -27,5 +26,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = "Text"
         return cell
-    }    
+    }
 }
